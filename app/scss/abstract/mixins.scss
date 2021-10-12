@@ -33,7 +33,7 @@ $breakpoints-down: (
 
 @mixin font-face($type: 'default', $size, $weight, $color: null) {
   @if $type== 'default' {
-    font-family: var(--font-family-spartan);
+    font-family: var(--font-family-kumbh-sans);
   }
 
   @if $color != '' {
