@@ -1,0 +1,50 @@
+@use '../abstract/' as *;
+
+#icon {
+  &-hamburger,
+  &-logo,
+  &-close,
+  &-cart,
+  &-profile,
+  &-prev,
+  &-next,
+  &-minus,
+  &-plus {
+    display: block;
+  }
+
+  &-hamburger {
+    margin-right: rem(16);
+  }
+
+  @include breakpoint-up(tablet) {
+    &-cart,
+    &-profile {
+      cursor: pointer;
+    }
+
+    &-cart:hover path {
+      fill: var(--black);
+    }
+  }
+
+  &-profile {
+    width: rem(50);
+    height: rem(50);
+    border: 2px solid hsla(0, 0%, 0%, 0);
+    border-radius: 50%;
+
+    @include breakpoint-up(tablet) {
+      &:hover {
+        border: 2px solid var(--orange);
+      }
+    }
+  }
+
+  @include breakpoint-down(tablet) {
+    &-profile {
+      width: rem(24);
+      height: auto;
+    }
+  }
+}
