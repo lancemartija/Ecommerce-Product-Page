@@ -1,0 +1,129 @@
+@use '../abstract/' as *;
+
+#header {
+  align-items: center;
+  display: flex;
+  height: rem(112);
+
+  .nav {
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    height: 100%;
+    width: 100%;
+
+    &__wrapper {
+      display: flex;
+
+      &--logo {
+        align-items: center;
+        display: flex;
+      }
+
+      &--items {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      &--icons {
+        align-items: center;
+        display: flex;
+      }
+    }
+
+    &__sidebar-menu {
+      &.active {
+        @include position(absolute, $top: 0, $left: 0);
+        display: block;
+      }
+    }
+
+    &__links {
+      align-items: center;
+      display: flex;
+    }
+
+    &__item {
+      &:not(:last-child) {
+        margin-right: rem(34);
+      }
+
+      &--logo {
+        margin-right: rem(58);
+      }
+
+      &--cart {
+        margin-right: rem(46);
+      }
+    }
+
+    &__link {
+      @include font-face(
+        default,
+        var(--font-size-default),
+        400,
+        var(--dark-grayish-blue)
+      );
+      position: relative;
+      text-decoration: none;
+
+      @include breakpoint-up(tablet) {
+        &:hover {
+          color: var(--black);
+
+          &::before {
+            @include position(absolute, $content: '', $left: 0, $bottom: 0);
+            background-color: var(--orange);
+            height: 4px;
+            transform: translateY(rem(48));
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint-up(tablet) {
+  .nav__item {
+    &--hamburger,
+    &--close {
+      display: none;
+    }
+  }
+}
+
+@include breakpoint-down(tablet) {
+  #header {
+    height: auto;
+
+    .nav {
+      justify-content: space-between;
+      padding: rem(24);
+
+      &__wrapper--items {
+        width: auto;
+      }
+
+      &__sidebar-menu {
+        display: none;
+      }
+
+      &__item {
+        &--logo {
+          margin-right: 0;
+        }
+
+        &--cart {
+          margin-right: rem(22);
+        }
+      }
+
+      &__links {
+        display: block;
+      }
+    }
+  }
+}
