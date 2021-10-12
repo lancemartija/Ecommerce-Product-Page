@@ -1,15 +1,13 @@
-@use '../abstract/functions.scss' as func;
-
 :root {
   // ------ Font Faces ------ //
   --font-family-kumbh-sans: 'Kumbh Sans', sans-serif;
 
   // ------ Font Sizes ------ //
-  --font-size-sm: func.rem(12); // 12px
-  --font-size-default: func.rem(16); // 16px
-  --font-size-med: func.rem(24); // 24px
-  --font-size-lg: func.rem(48); // 48px
-  --font-size-xlg: func.rem(64); // 64px
+  --font-size-sm: 0.75rem; // 12px
+  --font-size-default: 1rem; // 16px
+  --font-size-med: 1.5rem; // 24px
+  --font-size-lg: 3rem; // 48px
+  --font-size-xlg: 4rem; // 64px
 
   // ------ Colors ------ //
   --orange: hsl(26, 100%, 55%);
