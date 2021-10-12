@@ -187,6 +187,147 @@ select {
   --white: hsl(0, 0%, 100%);
   --black: hsl(0, 0%, 0%);
   --black-75: hsla(0, 0%, 0%, 0.459);
+  --border: hsl(255, 11%, 93%);
+}
+
+#icon-hamburger, #icon-logo, #icon-close, #icon-cart, #icon-profile, #icon-prev, #icon-next, #icon-minus, #icon-plus {
+  display: block;
+}
+#icon-hamburger {
+  margin-right: 1rem;
+}
+@media (min-width: 48em) {
+  #icon-cart, #icon-profile {
+    cursor: pointer;
+  }
+  #icon-cart:hover path {
+    fill: var(--black);
+  }
+}
+#icon-profile {
+  width: 3.125rem;
+  height: 3.125rem;
+  border: 2px solid rgba(0, 0, 0, 0);
+  border-radius: 50%;
+}
+@media (min-width: 48em) {
+  #icon-profile:hover {
+    border: 2px solid var(--orange);
+  }
+}
+@media (max-width: 47.9375em) {
+  #icon-profile {
+    width: 1.5rem;
+    height: auto;
+  }
+}
+
+#main {
+  margin: 0 auto;
+  max-width: 69.5rem;
+  position: relative;
+}
+
+#header {
+  align-items: center;
+  display: flex;
+  height: 7rem;
+}
+#header .nav {
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+#header .nav__wrapper {
+  display: flex;
+}
+#header .nav__wrapper--logo {
+  align-items: center;
+  display: flex;
+}
+#header .nav__wrapper--items {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+#header .nav__wrapper--icons {
+  align-items: center;
+  display: flex;
+}
+#header .nav__sidebar-menu.active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+}
+#header .nav__links {
+  align-items: center;
+  display: flex;
+}
+#header .nav__item:not(:last-child) {
+  margin-right: 2.125rem;
+}
+#header .nav__item--logo {
+  margin-right: 3.625rem;
+}
+#header .nav__item--cart {
+  margin-right: 2.875rem;
+}
+#header .nav__link {
+  font-family: var(--font-family-kumbh-sans);
+  color: var(--dark-grayish-blue);
+  font-size: var(--font-size-default);
+  font-weight: 400;
+  position: relative;
+  text-decoration: none;
+}
+@media (min-width: 48em) {
+  #header .nav__link:hover {
+    color: var(--black);
+  }
+  #header .nav__link:hover::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    background-color: var(--orange);
+    height: 4px;
+    transform: translateY(3rem);
+    width: 100%;
+  }
+}
+
+@media (min-width: 48em) {
+  .nav__item--hamburger, .nav__item--close {
+    display: none;
+  }
+}
+@media (max-width: 47.9375em) {
+  #header {
+    height: auto;
+  }
+  #header .nav {
+    justify-content: space-between;
+    padding: 1.5rem;
+  }
+  #header .nav__wrapper--items {
+    width: auto;
+  }
+  #header .nav__sidebar-menu {
+    display: none;
+  }
+  #header .nav__item--logo {
+    margin-right: 0;
+  }
+  #header .nav__item--cart {
+    margin-right: 1.375rem;
+  }
+  #header .nav__links {
+    display: block;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
