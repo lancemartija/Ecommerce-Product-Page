@@ -173,11 +173,11 @@ select {
 
 :root {
   --font-family-kumbh-sans: "Kumbh Sans", sans-serif;
-  --font-size-sm: func.rem(12);
-  --font-size-default: func.rem(16);
-  --font-size-med: func.rem(24);
-  --font-size-lg: func.rem(48);
-  --font-size-xlg: func.rem(64);
+  --font-size-sm: 0.75rem;
+  --font-size-default: 1rem;
+  --font-size-med: 1.5rem;
+  --font-size-lg: 3rem;
+  --font-size-xlg: 4rem;
   --orange: hsl(26, 100%, 55%);
   --pale-orange: hsl(25, 100%, 94%);
   --very-dark-blue: hsl(220, 13%, 13%);
