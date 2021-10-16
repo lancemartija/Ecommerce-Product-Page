@@ -31,13 +31,16 @@ $breakpoints-down: (
 
 // ---------- FONT-FACE MIXINS ---------- //
 
-@mixin font-face($type: 'default', $size, $weight, $color: null) {
+@mixin font-face($type: default, $size, $weight, $color) {
   @if $type == 'default' {
-    font-family: var(--font-family-kumbh-sans);
+    font-family: var(--font-family-primary);
   }
 
-  color: #{$color};
-  font-size: #{$size};
+  @if color != null {
+    color: $color;
+  }
+
+  font-size: $size;
   font-weight: $weight;
 }
 
