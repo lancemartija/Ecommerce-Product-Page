@@ -4,6 +4,10 @@ document.addEventListener('click', (e) => {
   const isHamburger = e.target.matches('[data-hamburger-button]')
   const isCloseButton = e.target.matches('[data-close-button]')
 
+  if (e.target.closest('[data-sidebar-menu]') == null) {
+    sidebarMenu.classList.remove('active')
+  }
+
   if (
     isHamburger ||
     isCloseButton ||
