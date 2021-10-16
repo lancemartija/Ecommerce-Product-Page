@@ -1,0 +1,17 @@
+@use '../abstract/' as *;
+
+@include breakpoint-down(tablet) {
+  .nav {
+    &__sidebar-menu {
+      @include position(absolute, $top: 0, $right: 0, $bottom: 0, $left: 0);
+      background-color: var(--white);
+      display: none;
+      padding: rem(24);
+      width: rem(250);
+
+      &.active {
+        display: block;
+      }
+    }
+  }
+}
