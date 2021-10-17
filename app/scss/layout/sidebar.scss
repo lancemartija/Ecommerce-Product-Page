@@ -11,11 +11,37 @@
       @include position(absolute, $top: 0, $right: 0, $bottom: 0, $left: 0);
       background-color: var(--white);
       display: none;
+      margin-right: rem(125);
       padding: rem(24);
-      width: rem(250);
 
-      &.active {
+      &.toggle-in {
+        animation: slide-to-right 250ms ease-in-out forwards;
         display: block;
+      }
+
+      &.toggle-out {
+        animation: slide-to-left 250ms ease-in-out forwards;
+        display: block;
+      }
+
+      @keyframes slide-to-right {
+        from {
+          transform: translateX(-100%);
+        }
+
+        to {
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes slide-to-left {
+        from {
+          transform: translateX(0);
+        }
+
+        to {
+          transform: translateX(-100%);
+        }
       }
     }
   }
