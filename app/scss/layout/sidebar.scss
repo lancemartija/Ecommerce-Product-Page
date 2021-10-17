@@ -1,8 +1,13 @@
 @use '../abstract/' as *;
 
 @include breakpoint-down(tablet) {
-  .nav {
-    &__sidebar-menu {
+  .sidebar {
+    &.overlay {
+      @include position(absolute, $top: 0, $right: 0, $bottom: 0, $left: 0);
+      background-color: var(--black-75);
+    }
+
+    &__wrapper {
       @include position(absolute, $top: 0, $right: 0, $bottom: 0, $left: 0);
       background-color: var(--white);
       display: none;
