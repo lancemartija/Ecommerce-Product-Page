@@ -1,3 +1,11 @@
+body ::selection {
+  background-color: var(--orange);
+  color: var(--white);
+}
+body.no-scroll {
+  overflow: hidden !important;
+}
+
 /* 
 html5doctor.com Reset Stylesheet
 v1.6.1
@@ -318,7 +326,15 @@ select {
   }
 }
 @media (max-width: 47.9375em) {
-  .nav__sidebar-menu {
+  .sidebar.overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--black-75);
+  }
+  .sidebar__wrapper {
     position: absolute;
     top: 0;
     right: 0;
@@ -329,7 +345,7 @@ select {
     padding: 1.5rem;
     width: 15.625rem;
   }
-  .nav__sidebar-menu.active {
+  .sidebar__wrapper.active {
     display: block;
   }
 }
