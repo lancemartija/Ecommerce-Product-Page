@@ -1,0 +1,10 @@
+body {
+  ::selection {
+    background-color: var(--orange);
+    color: var(--white);
+  }
+
+  &.no-scroll {
+    overflow: hidden !important;
+  }
+}
