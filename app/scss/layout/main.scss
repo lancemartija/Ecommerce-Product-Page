@@ -4,4 +4,10 @@
   margin: 0 auto;
   max-width: rem(1112);
   position: relative;
+
+  @include breakpoint-up(tablet) {
+    display: flex;
+    justify-content: space-between;
+    padding: rem(90) 0;
+  }
 }
