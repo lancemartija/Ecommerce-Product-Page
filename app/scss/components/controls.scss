@@ -1,0 +1,63 @@
+@use '../abstract/' as *;
+
+.controls {
+  &--prev,
+  &--next {
+    background-color: var(--white);
+    border-radius: 50%;
+    display: grid;
+    height: rem(56);
+    place-items: center;
+    width: rem(56);
+    position: absolute;
+  }
+
+  &--prev {
+    left: -5%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &--next {
+    right: -5%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  @include breakpoint-up(tablet) {
+    display: none;
+
+    &--prev,
+    &--next {
+      cursor: pointer;
+
+      &:hover {
+        path {
+          stroke: var(--orange);
+        }
+      }
+    }
+  }
+
+  @include breakpoint-down(tablet) {
+    &--prev,
+    &--next {
+      height: rem(42);
+      width: rem(42);
+    }
+
+    &--prev {
+      margin-left: rem(16);
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &--next {
+      margin-right: rem(16);
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
